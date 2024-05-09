@@ -1,0 +1,16 @@
+# Next.js
+.next
+out
+
+# Node.js
+node_modules
+
+# npm
+npm-debug.log
+*.lock
+.pnp
+.pnp.js
+
+# Yarn
+yarn-error.log
+yarn.lock
