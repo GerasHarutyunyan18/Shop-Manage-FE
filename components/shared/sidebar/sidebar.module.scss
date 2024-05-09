@@ -1,0 +1,52 @@
+.container {
+  padding: 10px 20px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+
+  .header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 5px;
+
+    .name {
+      font-size: 20px;
+    }
+  }
+
+  .links {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .item {
+      padding: 10px 20px;
+      border-radius: 30px;
+      border: 1px solid #dff5ff;
+      transition: 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      .linkItem {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    .logOutBtn {
+      background-color: #c40c0c;
+      color: white;
+    }
+
+    .itemActive {
+      color: white;
+      background-color: #5356ff;
+    }
+  }
+}
