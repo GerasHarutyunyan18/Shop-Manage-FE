@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+  .imageContainer {
+    width: 15%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .infoContainer {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .name {
+      font-size: 40px;
+      font-weight: 500;
+    }
+  }
+
+  .workersCounts {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    .label {
+      font-size: 20px;
+    }
+
+    .value {
+      font-size: 25px;
+      font-weight: 600;
+
+      .balanceContainer {
+        display: flex;
+        margin-top: 3px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+
+        .currencyIcon {
+          width: 30px;
+        }
+      }
+    }
+  }
+}

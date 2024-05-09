@@ -9,6 +9,8 @@ import {
 
 export const RoutesWithoutSidebar = ["/login", "/signup"];
 
+export const MarketDefaultImgUrl = 'https://png.pngtree.com/png-vector/20190826/ourmid/pngtree-shop-png-image_1699051.jpg'
+
 export const SidebarLinks = [
   {
     label: "Home",

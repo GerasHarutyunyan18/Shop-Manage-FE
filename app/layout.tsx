@@ -10,6 +10,7 @@ import SideBar from "@/components/shared/sidebar";
 import { useTheme } from "next-themes";
 import { useEffect } from "react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { MarketProvider } from "@/context/MarketContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,18 +25,22 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <AuthProvider>
-          {RoutesWithoutSidebar.includes(pathname) ? (
-            <div>{children}</div>
-          ) : (
-            <div className="bigContainer">
-              <div className="sidebar">
-                <SideBar />
+          <MarketProvider>
+            {RoutesWithoutSidebar.includes(pathname) ? (
+              <div>{children}</div>
+            ) : (
+              <div className="bigContainer">
+                <div className="sidebar">
+                  <SideBar />
+                </div>
+                <div className="content">
+                  <NextThemesProvider defaultTheme="light">
+                    {children}
+                  </NextThemesProvider>
+                </div>
               </div>
-              <div>
-                <NextThemesProvider defaultTheme="light">{children}</NextThemesProvider>
-              </div>
-            </div>
-          )}
+            )}
+          </MarketProvider>
         </AuthProvider>
       </body>
     </html>

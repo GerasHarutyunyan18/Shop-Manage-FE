@@ -27,6 +27,10 @@ a {
   width: 20%;
 }
 
+.content {
+  width: 80%;
+}
+
 .bigContainer {
   display: flex;
 }
