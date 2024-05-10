@@ -3,9 +3,11 @@ export type User = {
   name: string;
   surname: string;
   email: string;
+  rate: number;
   birthDate: string;
   token: string;
   image: string;
+  role: string;
 };
 
 export type Market = {

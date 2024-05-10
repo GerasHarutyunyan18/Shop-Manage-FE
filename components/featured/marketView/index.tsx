@@ -25,7 +25,9 @@ export default function MarketView({ id }: MarketViewProps) {
     <div className={styles.container}>
       <Loading isLoading={isFetching} />
       {!isFetching && <MarketCard market={marketView} />}
-      <UserList marketId={id} />
+      <div className={styles.userList}>
+        <UserList marketId={id} />
+      </div>
     </div>
   );
 }

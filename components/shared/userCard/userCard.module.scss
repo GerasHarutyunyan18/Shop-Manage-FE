@@ -1,3 +1,25 @@
 .container {
   display: flex;
+  border: 1px solid #ccc;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+
+  .avatarContainer {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 50%;
+
+    .userInfo {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+
+  .actionsContainer {
+    display: flex;
+  }
 }
