@@ -23,3 +23,24 @@
     display: flex;
   }
 }
+
+.deleteDialog {
+  padding: 20px !important;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  .deleteText {
+    color: #c40c0c;
+    font-weight: 600;
+  }
+}

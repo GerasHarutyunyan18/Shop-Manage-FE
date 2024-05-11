@@ -1,7 +1,14 @@
 .container {
   width: 100%;
 
-  .userList {
-    width: 50%;
+  .marketInfo {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+
+    .userList,
+    .productList {
+      width: 50%;
+    }
   }
 }

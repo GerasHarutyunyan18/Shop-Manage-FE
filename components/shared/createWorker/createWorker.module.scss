@@ -1,0 +1,23 @@
+.container {
+  position: absolute;
+  width: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 10px;
+  border-radius: 3px;
+
+  .title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

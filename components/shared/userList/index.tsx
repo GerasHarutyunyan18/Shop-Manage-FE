@@ -3,9 +3,13 @@
 import { useEffect, useState } from "react";
 import styles from "./userList.module.scss";
 import { User } from "@/constants/types";
-import { UserService } from "@/services/UserService";
+import { WorkerService } from "@/services/WorkerService";
 import UserCard from "../userCard";
 import { useAuthContext } from "@/context/AuthContext";
+import AddUser from "../createWorker";
+import { useWorkerContext } from "@/context/WorkerContext";
+import { CircularProgress } from "@mui/material";
+import Loading from "../loading";
 
 interface UserListProps {
   marketId: string;
@@ -13,30 +17,22 @@ interface UserListProps {
 }
 
 export default function UserList({ marketId, companyId }: UserListProps) {
-  const [users, setUsers] = useState<User[]>();
+  const { workers, isLoading, fetchMarketWorkers } = useWorkerContext();
   const { user } = useAuthContext();
 
-  const fetchMarketUsers = async () => {
-    if (!user.token) {
-      return;
-    }
-
-    const res = await UserService.getByMarketId(marketId);
-
-    if (res.success) {
-      setUsers(res.data);
-    }
-  };
-
   useEffect(() => {
-    fetchMarketUsers();
+    if (marketId) {
+      fetchMarketWorkers(marketId);
+    }
   }, [marketId, user]);
 
   return (
     <div className={styles.container}>
-      {users?.map((el) => (
-        <UserCard user={el} />
-      ))}
+      <AddUser />
+      <div className={styles.users}>
+        <Loading isLoading={isLoading} />
+        {!isLoading && workers?.map((el) => <UserCard user={el} />)}
+      </div>
     </div>
   );
 }

@@ -1,0 +1,48 @@
+.container {
+  .innerContainer {
+    display: flex;
+    gap: 5px;
+  }
+  .infoContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    img {
+      width: 100px;
+      border-radius: 10px;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+
+      .name {
+        font-size: 23px;
+        font-weight: 600;
+      }
+
+      .price {
+        .currency {
+          font-weight: 600;
+        }
+      }
+    }
+
+    .count {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      .amount{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .currencyIcon{
+        width: 23px;
+      }
+    }
+  }
+}

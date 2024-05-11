@@ -1,3 +1,5 @@
+import { Currencies } from "./enums";
+
 export type User = {
   id: number,
   name: string;
@@ -23,3 +25,12 @@ export type Market = {
   totalBalance: any
 };
 
+export type Product = {
+  id: number,
+  name: string;
+  image: string
+  count: number;
+  price: number;
+  countMethod: string
+  currency: Currencies
+}

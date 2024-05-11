@@ -33,6 +33,7 @@ a {
 
 .bigContainer {
   display: flex;
+  gap: 10px;
 }
 
 /* @media (prefers-color-scheme: dark) {

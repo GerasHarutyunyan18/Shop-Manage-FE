@@ -1,9 +1,9 @@
 import axiosInstance from "./axiosInstance";
 
-export const UserService = {
-    getByMarketId: async (id: string) => {
+export const ProductService = {
+    getByMarketId: async (id: number, name?: string) => {
         try {
-            const res = await axiosInstance.get(`user/market/${id}`);
+            const res = await axiosInstance.get(`product/market/${id}?name=${name ?? ''}`);
 
             return res.data;
         } catch (err: any) {

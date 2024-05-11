@@ -47,3 +47,6 @@ export const stringAvatar = (name: string) => {
     };
 }
 
+export const generateDeleteText = (id: number) => {
+    return `sudo delete user id=${id}`
+}
