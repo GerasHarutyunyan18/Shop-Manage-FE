@@ -2,6 +2,8 @@ import { Product } from "@/constants/types";
 
 import styles from "./productCard.module.scss";
 import { getCurrencyIcon } from "@/constants/helpers";
+import ProductActions from "../productActions";
+import { Button } from "@mui/material";
 
 interface ProductCardProps {
   product: Product;
@@ -40,10 +42,13 @@ export default function ProductCard({ product }: ProductCardProps) {
               {product.price * product.count} {product.currency}
             </b>
             <img
-            className={styles.currencyIcon}
+              className={styles.currencyIcon}
               src={getCurrencyIcon(product.currency)}
             />
           </span>
+        </div>
+        <div>
+          <ProductActions product={product}/>
         </div>
       </div>
     </div>

@@ -51,6 +51,13 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const toggleGlobalSearch = (value: boolean) => {
+    if(value){
+      setProducts([])
+      setFilteredProducts([])
+    }else{
+      setSearchWord('')
+      fetchProductsByMarketId(marketView.id)
+    }
     setIsGlobalSearch(value);
   };
 
